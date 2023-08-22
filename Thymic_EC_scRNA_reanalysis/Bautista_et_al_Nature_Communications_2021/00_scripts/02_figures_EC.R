@@ -19,9 +19,9 @@ library(RColorBrewer)
 # Load the Seurat object containing the EC subclustering information 
 # from the Bautista dataset
 EC_data <- LoadH5Seurat(here::here(
-  "scRNA_data_analysis",
-  "Bautista_Nature_Communications_2021",
-  "processed_data",
+  "Thymic_EC_scRNA_reanalysis",
+  "Bautista_et_al_Nature_Communications_2021",
+  "02_processed_data",
   "Bautista_EC_subclusters.h5seurat"
 ))
 
@@ -42,9 +42,9 @@ UMAP_plot <- DimPlot(EC_subset, cols = cell_colors) +
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "03_figures",
     "UMAP_EC_total.png"
   ),
   width = 9,
@@ -75,9 +75,9 @@ UMAP_cluster_per_sample <- DimPlot_scCustom(
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "03_figures",
     "UMAP_EC_per_sample.png"
   ),
   width = 12,
@@ -131,9 +131,9 @@ dotplot_cell_types <- DotPlot_scCustom(
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "03_figures",
     "dotplot_cell_types.png"
   ),
   width = 7,
@@ -177,9 +177,9 @@ dotplot_samples <- DotPlot_scCustom(
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "03_figures",
     "dotplot_samples.png"
   ),
   width = 7,
@@ -212,9 +212,9 @@ stacked_barplot <- dittoBarPlot(
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "03_figures",
     "stacked_barplot.png"
   ),
   width = 3,
@@ -247,9 +247,9 @@ for (gene in genes) {
   print(plot)
   ggsave(
     file = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "figures",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "03_figures",
       paste0(gene, "_density.png")
     ),
     width = 9,
@@ -330,9 +330,9 @@ heatmap_DEG <-
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "03_figures",
     "heatmap_DEG.png"
   ),
   width = 4,
@@ -384,9 +384,9 @@ for(cell_type in cell_type_list) {
   print(plot)
   ggsave(
     file = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "figures",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "03_figures",
       paste0(cell_type, "_dotplot.png")
     ),
     width = 9,

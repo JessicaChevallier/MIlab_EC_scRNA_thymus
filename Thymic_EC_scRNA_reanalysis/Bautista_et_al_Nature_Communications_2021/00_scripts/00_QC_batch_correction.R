@@ -24,23 +24,23 @@ library(SeuratWrappers)
 Fetal_19weeks <-
   ReadMtx(
     mtx = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466780_F_19wks_matrix.mtx.gz"
     ),
     features = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466780_F_19wks_genes.tsv.gz"
     ),
     cells = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466780_F_19wks_barcodes.tsv.gz"
     )
@@ -49,23 +49,23 @@ Fetal_19weeks <-
 Postnatal_10m_2 <-
   ReadMtx(
     mtx = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466785_P_10m_2_matrix.mtx.gz"
     ),
     features = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466785_P_10m_2_genes.tsv.gz"
     ),
     cells = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466785_P_10m_2_barcodes.tsv.gz"
     )
@@ -74,23 +74,23 @@ Postnatal_10m_2 <-
 Adult_25years <-
   ReadMtx(
     mtx = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466786_A_25y_matrix.mtx.gz"
     ),
     features = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466786_A_25y_features.tsv.gz"
     ),
     cells = here::here(
-      "scRNA_data_analysis",
-      "Bautista_Nature_Communications_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Bautista_et_al_Nature_Communications_2021",
+      "01_raw_data",
       "GSE147520_RAW",
       "GSM4466786_A_25y_barcodes.tsv.gz"
     )
@@ -264,9 +264,9 @@ combined_stroma <-
 SaveH5Seurat(
   combined_stroma,
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "processed_data",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "02_processed_data",
     "Bautista_combined_stroma"
   ),
   overwrite = TRUE
@@ -277,9 +277,9 @@ SaveH5Seurat(
 
 # Load the data
 data <- LoadH5Seurat(here::here(
-  "scRNA_data_analysis",
-  "Bautista_Nature_Communications_2021",
-  "processed_data",
+  "Thymic_EC_scRNA_reanalysis",
+  "Bautista_et_al_Nature_Communications_2021",
+  "02_processed_data",
   "Bautista_combined_stroma.h5seurat")
 )
 
@@ -397,9 +397,9 @@ DimPlot(EC_subset, split.by = "orig.ident")
 SaveH5Seurat(
   EC_subset,
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "processed_data",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "02_processed_data",
     "EC_subset"
   ),
   overwrite = TRUE

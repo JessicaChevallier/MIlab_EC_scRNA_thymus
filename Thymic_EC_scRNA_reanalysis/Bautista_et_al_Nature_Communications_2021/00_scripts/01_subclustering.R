@@ -15,9 +15,9 @@ library(SeuratDisk)
 
 # Load the data
 EC_subset <- LoadH5Seurat(here::here(
-  "scRNA_data_analysis",
-  "Bautista_Nature_Communications_2021",
-  "processed_data",
+  "Thymic_EC_scRNA_reanalysis",
+  "Bautista_et_al_Nature_Communications_2021",
+  "02_processed_data",
   "EC_subset.h5seurat")
 )
 
@@ -131,9 +131,9 @@ DimPlot(EC_subset)
 SaveH5Seurat(
   EC_subset,
   here::here(
-    "scRNA_data_analysis",
-    "Bautista_Nature_Communications_2021",
-    "processed_data",
+    "Thymic_EC_scRNA_reanalysis",
+    "Bautista_et_al_Nature_Communications_2021",
+    "02_processed_data",
     "Bautista_EC_subclusters"
   ),
   overwrite = TRUE
