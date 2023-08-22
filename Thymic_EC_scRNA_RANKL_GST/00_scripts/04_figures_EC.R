@@ -16,7 +16,7 @@ EC_data <- LoadH5Seurat(here::here(
   "GST_RANKL_EC_subclusters.h5seurat"
 ))
 
-## EC UMAP figures
+## EC UMAPs
 cell_colors <-
   c("#4E67C8FF",
                "#D098EEFF",

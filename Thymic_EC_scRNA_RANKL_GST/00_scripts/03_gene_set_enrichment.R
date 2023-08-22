@@ -38,7 +38,8 @@ angiogenesis_gene_set <- read.csv(
     "03_references",
     "gene_factor_Glasner_et_al_2023.csv"
   ),
-  sep = ';'
+  sep = ',',
+  row.names = 1
 )
 
 # Response to RANK (RANK-deficient lymphatic EC) gene set
@@ -48,7 +49,8 @@ RANK_response_gene_set <- read.csv(
     "03_references",
     "down_LEC_genes_Camara_et_al_2019.csv"
   ),
-  sep = ','
+  sep = ',',
+  row.names = 1
 )
 
 # Compute the module scores for each gene set
