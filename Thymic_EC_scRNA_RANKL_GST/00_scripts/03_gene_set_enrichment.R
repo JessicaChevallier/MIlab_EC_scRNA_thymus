@@ -36,7 +36,7 @@ angiogenesis_gene_set <- read.csv(
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
     "03_references",
-    "gene_factor_Glasner_2023.csv"
+    "gene_factor_Glasner_et_al_2023.csv"
   ),
   sep = ';'
 )
@@ -46,7 +46,7 @@ RANK_response_gene_set <- read.csv(
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
     "03_references",
-    "down_LEC_genes_Camara_2019.csv"
+    "down_LEC_genes_Camara_et_al_2019.csv"
   ),
   sep = ','
 )
