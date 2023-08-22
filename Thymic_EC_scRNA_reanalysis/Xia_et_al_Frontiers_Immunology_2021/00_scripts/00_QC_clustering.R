@@ -22,21 +22,21 @@ library(gprofiler2)
 EC <-
   ReadMtx(
     mtx = here::here(
-      "scRNA_data_analysis",
-      "Xia_Frontiers_Immunology_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Xia_et_al_Frontiers_Immunology_2021",
+      "01_raw_data",
       "GSM5324978_thymic_portal_endothelial_cells_matrix.mtx.gz"
     ),
     features = here::here(
-      "scRNA_data_analysis",
-      "Xia_Frontiers_Immunology_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Xia_et_al_Frontiers_Immunology_2021",
+      "01_raw_data",
       "GSM5324978_thymic_portal_endothelial_cells_genes.tsv.gz"
     ),
     cells = here::here(
-      "scRNA_data_analysis",
-      "Xia_Frontiers_Immunology_2021",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "Xia_et_al_Frontiers_Immunology_2021",
+      "01_raw_data",
       "GSM5324978_thymic_portal_endothelial_cells_barcodes.tsv.gz"
     )
   )
@@ -199,7 +199,7 @@ FeaturePlot(EC_QC_singlet, features = c("Apln", "Pgf"))
 # Smooth Muscle Cell (SMC) markers
 FeaturePlot(EC_QC_singlet, features = c("Myl9", "Vim", "Pdgfrb")) 
 
-#  Mesenchymal / Fibroblast markers
+# Mesenchymal / Fibroblast markers
 FeaturePlot(EC_QC_singlet, features = c("Pdgfra", "Dcn")) 
 
 # B- and T-cell contaminants 
@@ -239,9 +239,9 @@ DimPlot(EC_subset, reduction = "umap", label = TRUE)
 SaveH5Seurat(
   EC_subset,
   here::here(
-    "scRNA_data_analysis",
-    "Xia_Frontiers_Immunology_2021",
-    "processed_data",
+    "Thymic_EC_scRNA_reanalysis",
+    "Xia_et_al_Frontiers_Immunology_2021",
+    "02_processed_data",
     "Xia_EC_clusters"
   ),
   overwrite = TRUE

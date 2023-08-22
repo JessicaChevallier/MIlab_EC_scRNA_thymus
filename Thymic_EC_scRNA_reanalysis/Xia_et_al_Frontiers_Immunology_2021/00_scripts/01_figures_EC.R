@@ -14,11 +14,13 @@ library(Nebulosa)
 
 # Load the Seurat object containing the EC clustering information 
 # from the Xia dataset
-EC_data <- LoadH5Seurat(here::here(
-  "scRNA_data_analysis",
-  "Xia_Frontiers_Immunology_2021",
-  "processed_data",
-  "Xia_EC_clusters.h5seurat")
+EC_data <- LoadH5Seurat(
+  here::here(
+    "Thymic_EC_scRNA_reanalysis",
+    "Xia_et_al_Frontiers_Immunology_2021",
+    "02_processed_data",
+    "Xia_EC_clusters.h5seurat"
+  )
 )
 
 # Verify
@@ -42,9 +44,9 @@ UMAP_plot <- DimPlot(EC_data, cols = cell_colors) +
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "Xia_Frontiers_Immunology_2021",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "Xia_et_al_Frontiers_Immunology_2021",
+    "03_figures",
     "UMAP.png"
   ),
   width = 8,
@@ -98,9 +100,9 @@ dotplot_cell_types <- DotPlot_scCustom(
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "Xia_Frontiers_Immunology_2021",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "Xia_et_al_Frontiers_Immunology_2021",
+    "03_figures",
     "dotplot.png"
   ),
   width = 8,
@@ -135,9 +137,9 @@ for (gene in genes) {
   print(plot)
   ggsave(
     file = here::here(
-      "scRNA_data_analysis",
-      "Xia_Frontiers_Immunology_2021",
-      "figures",
+      "Thymic_EC_scRNA_reanalysis",
+      "Xia_et_al_Frontiers_Immunology_2021",
+      "03_figures",
       paste0(gene, "_feature_EC.png")
     ),
     width = 6,
@@ -161,9 +163,9 @@ for (gene in genes) {
   print(plot)
   ggsave(
     file = here::here(
-      "scRNA_data_analysis",
-      "Xia_Frontiers_Immunology_2021",
-      "figures",
+      "Thymic_EC_scRNA_reanalysis",
+      "Xia_et_al_Frontiers_Immunology_2021",
+      "03_figures",
       paste0(gene, "_density_EC.png")
     ),
     width = 6,
