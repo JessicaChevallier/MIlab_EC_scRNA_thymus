@@ -10,7 +10,7 @@ library(SeuratDisk)
 # Load the Seurat object containing the EC clusters
 EC_data <- LoadH5Seurat(here::here(
   "Thymic_EC_scRNA_RANKL_GST",
-  "processed_data",
+  "02_processed_data",
   "GST_RANKL_EC.h5seurat"
 ))
 
@@ -157,7 +157,7 @@ SaveH5Seurat(
   EC_data,
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "processed_data",
+    "02_processed_data",
     "GST_RANKL_EC_subclusters"
   ),
   overwrite = TRUE

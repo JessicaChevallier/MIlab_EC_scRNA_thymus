@@ -14,19 +14,19 @@ GST_12m <-
   ReadMtx(
     mtx = here::here(
       "Thymic_EC_scRNA_RANKL_GST",
-      "raw_data",
+      "01_raw_data",
       "GST",
       "matrix.mtx.gz"
     ),
     features = here::here(
       "Thymic_EC_scRNA_RANKL_GST",
-      "raw_data",
+      "01_raw_data",
       "GST",
       "features.tsv.gz"
     ),
     cells = here::here(
       "Thymic_EC_scRNA_RANKL_GST",
-      "raw_data",
+      "01_raw_data",
       "GST",
       "barcodes.tsv.gz"
     )
@@ -36,19 +36,19 @@ RANKL_12m <-
   ReadMtx(
     mtx = here::here(
       "Thymic_EC_scRNA_RANKL_GST",
-      "raw_data",
+      "01_raw_data",
       "RANKL",
       "matrix.mtx.gz"
     ),
     features = here::here(
       "Thymic_EC_scRNA_RANKL_GST",
-      "raw_data",
+      "01_raw_data",
       "RANKL",
       "features.tsv.gz"
     ),
     cells = here::here(
       "Thymic_EC_scRNA_RANKL_GST",
-      "raw_data",
+      "01_raw_data",
       "RANKL",
       "barcodes.tsv.gz"
     )
@@ -257,7 +257,7 @@ SaveH5Seurat(
   data_subset,
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "processed_data",
+    "02_processed_data",
     "GST_RANKL_EC"
   ),
   overwrite = TRUE

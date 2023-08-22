@@ -27,7 +27,7 @@ library(rstatix)
 # Seurat object containing the EC clusters
 EC_data <- LoadH5Seurat(here::here(
   "Thymic_EC_scRNA_RANKL_GST",
-  "processed_data",
+  "02_processed_data",
   "GST_RANKL_EC_subclusters.h5seurat"
 ))
 
@@ -35,7 +35,7 @@ EC_data <- LoadH5Seurat(here::here(
 angiogenesis_gene_set <- read.csv(
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "references",
+    "03_references",
     "gene_factor_Glasner_2023.csv"
   ),
   sep = ';'
@@ -45,7 +45,7 @@ angiogenesis_gene_set <- read.csv(
 RANK_response_gene_set <- read.csv(
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "references",
+    "03_references",
     "down_LEC_genes_Camara_2019.csv"
   ),
   sep = ','
@@ -115,7 +115,7 @@ vln_plot_angiogenesis <-  ggplot(pathway_df,
 ggsave(
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "figures",
+    "04_figures",
     "module_score_vln_plot_angiogenesis.png"
   ),
   width = 6,
@@ -214,7 +214,7 @@ vln_plot_RANK_response <-  ggplot(pathway_df,
 ggsave(
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "figures",
+    "04_figures",
     "module_score_vln_plot_RANK_response.png"
   ),
   width = 6,

@@ -12,7 +12,7 @@ library(dittoSeq)
 # Load the Seurat object containing the EC subclustering information
 EC_data <- LoadH5Seurat(here::here(
   "Thymic_EC_scRNA_RANKL_GST",
-  "processed_data",
+  "02_processed_data",
   "GST_RANKL_EC_subclusters.h5seurat"
 ))
 
@@ -31,7 +31,7 @@ UMAP_total <- DimPlot(EC_data, cols = cell_colors)
 ggsave(
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "figures",
+    "04_figures",
     "UMAP_EC_total.png"
   ),
   width = 8,
@@ -92,7 +92,7 @@ dotplot_cell_types <- DotPlot_scCustom(
 ggsave(
   here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "figures",
+    "04_figures",
     "dotplot.png"
   ),
   width = 8,
@@ -150,7 +150,7 @@ dev.off()
 pdf(
   file = here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "figures",
+    "04_figures",
     "heatmap_HEV.pdf"
   ),
   width = 6,
@@ -187,7 +187,7 @@ functional_molecule_list <- c("Selp",
 pdf(
   file = here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "figures",
+    "04_figures",
     "heatmap_functional_molecule.pdf"
   ),
   width = 6,
@@ -242,7 +242,7 @@ cell_colors <-
 pdf(
   file = here::here(
     "Thymic_EC_scRNA_RANKL_GST",
-    "figures",
+    "04_figures",
     "heatmap_angiogenesis.pdf"
   ),
   width = 8,
