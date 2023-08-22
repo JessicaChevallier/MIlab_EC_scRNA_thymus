@@ -13,9 +13,9 @@ library(RColorBrewer)
 # Load the Seurat object containing the TEC clustering information 
 # from the Bautista dataset
 TEC_data <- LoadH5Seurat(here::here(
-  "scRNA_data_analysis",
-  "scRNA-seq_data_integration",
-  "processed_data",
+  "Thymic_EC_scRNA_reanalysis",
+  "scRNA_data_integration_Wells_and_Michelson",
+  "02_processed_data",
   "Integrated_Wells_Michelson.h5seurat"
 ))
 
@@ -93,9 +93,9 @@ UMAP_plot <- DimPlot(TEC_data, cols = cell_colors) +
 
 ggsave(
   here::here(
-    "scRNA_data_analysis",
-    "scRNA-seq_data_integration",
-    "figures",
+    "Thymic_EC_scRNA_reanalysis",
+    "scRNA_data_integration_Wells_and_Michelson",
+    "03_figures",
     "UMAP.png"
   ),
   UMAP_plot,
@@ -125,9 +125,9 @@ for (gene in genes) {
   print(plot)
   ggsave(
     file = here::here(
-      "scRNA_data_analysis",
-      "scRNA-seq_data_integration",
-      "figures",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "03_figures",
       paste0(gene, "_feature.png")
     ),
     width = 7,

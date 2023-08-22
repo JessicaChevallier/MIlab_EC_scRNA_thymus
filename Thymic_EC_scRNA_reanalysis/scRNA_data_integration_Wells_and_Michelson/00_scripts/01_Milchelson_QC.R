@@ -21,21 +21,24 @@ library(DoubletFinder)
 expression_matrix <-
   ReadMtx(
     mtx = here::here(
-      "scRNA_data_analysis",
-      "Michelson_Cell_2022",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Michelson_et_al",
       "GSM5831744_adult_perinate_gex_matrix.mtx.gz"
     ),
     features = here::here(
-      "scRNA_data_analysis",
-      "Michelson_Cell_2022",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Michelson_et_al",
       "GSM5831744_adult_perinate_gex_features.tsv.gz"
     ),
     cells = here::here(
-      "scRNA_data_analysis",
-      "Michelson_Cell_2022",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Michelson_et_al",
       "GSM5831744_adult_perinate_gex_barcodes.tsv.gz"
     )
   )
@@ -43,21 +46,24 @@ expression_matrix <-
 htos <-
   ReadMtx(
     mtx = here::here(
-      "scRNA_data_analysis",
-      "Michelson_Cell_2022",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Michelson_et_al",
       "GSM5831745_adult_perinate_hash_matrix.mtx.gz"
     ),
     features = here::here(
-      "scRNA_data_analysis",
-      "Michelson_Cell_2022",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Michelson_et_al",
       "GSM5831745_adult_perinate_hash_features.tsv.gz"
     ),
     cells = here::here(
-      "scRNA_data_analysis",
-      "Michelson_Cell_2022",
-      "raw_data",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Michelson_et_al",
       "GSM5831745_adult_perinate_hash_barcodes.tsv.gz"
     ), 
     feature.column = 1, cell.column = 1
@@ -168,10 +174,10 @@ VlnPlot(
 SaveH5Seurat(
   singlet,
   here::here(
-    "scRNA_data_analysis",
-    "Mathis_Cell_2022",
-    "processed_data",
-    "Mathis"
+    "Thymic_EC_scRNA_reanalysis",
+    "scRNA_data_integration_Wells_and_Michelson",
+    "02_processed_data",
+    "Michelson_QC"
   ),
   overwrite = TRUE
 )

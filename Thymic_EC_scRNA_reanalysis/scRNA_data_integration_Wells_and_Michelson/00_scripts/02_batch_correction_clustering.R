@@ -28,18 +28,18 @@ library(SeuratDisk)
 library(SeuratWrappers)
 
 # Import datasets
-Mathis <- LoadH5Seurat(here::here(
-  "scRNA_data_analysis",
-  "scRNA-seq_data_integration",
-  "raw_data",
-  "Mathis.h5seurat"
+Michelson <- LoadH5Seurat(here::here(
+  "Thymic_EC_scRNA_reanalysis",
+  "scRNA_data_integration_Wells_and_Michelson",
+  "02_processed_data",
+  "Michelson_QC.h5seurat"
 ))
 
 Wells <- LoadH5Seurat(here::here(
-  "scRNA_data_analysis",
-  "scRNA-seq_data_integration",
-  "raw_data",
-  "Wells.h5seurat"
+  "Thymic_EC_scRNA_reanalysis",
+  "scRNA_data_integration_Wells_and_Michelson",
+  "02_processed_data",
+  "Wells_QC.h5seurat"
 ))
 
 # Set the seed
@@ -54,8 +54,8 @@ set.seed(10403)
 TEC_combined <-
   merge(
     Wells,
-    y = Mathis,
-    add.cell.ids = c("Wells", "Mathis"),
+    y = Michelson,
+    add.cell.ids = c("Wells", "Michelson"),
     project = "TEC"
   )
 
@@ -314,9 +314,9 @@ DimPlot(TEC_combined)
 SaveH5Seurat(
   TEC_combined,
   here::here(
-    "scRNA_data_analysis",
-    "scRNA-seq_data_integration",
-    "processed_data",
+    "Thymic_EC_scRNA_reanalysis",
+    "scRNA_data_integration_Wells_and_Michelson",
+    "02_processed_data",
     "Integrated_Wells_Michelson"
   ),
   overwrite = TRUE

@@ -18,26 +18,26 @@ library(DoubletFinder)
 data_wk10 <-
   ReadMtx(
     mtx = here::here(
-      "scRNA_data_analysis",
-      "Wells_eLife_2020",
-      "raw_data",
-      "raw_GEO",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Wells_et_al",
       "filtered_feature_bc_matrix_controlwk10",
       "matrix.mtx.gz"
     ),
     features = here::here(
-      "scRNA_data_analysis",
-      "Wells_eLife_2020",
-      "raw_data",
-      "raw_GEO",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Wells_et_al",
       "filtered_feature_bc_matrix_controlwk10",
       "features.tsv.gz"
     ),
     cells = here::here(
-      "scRNA_data_analysis",
-      "Wells_eLife_2020",
-      "raw_data",
-      "raw_GEO",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Wells_et_al",
       "filtered_feature_bc_matrix_controlwk10",
       "barcodes.tsv.gz"
     )
@@ -46,26 +46,26 @@ data_wk10 <-
 data_wk2 <-
   ReadMtx(
     mtx = here::here(
-      "scRNA_data_analysis",
-      "Wells_eLife_2020",
-      "raw_data",
-      "raw_GEO",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Wells_et_al",
       "filtered_feature_bc_matrix_controlwk2",
       "matrix.mtx.gz"
     ),
     features = here::here(
-      "scRNA_data_analysis",
-      "Wells_eLife_2020",
-      "raw_data",
-      "raw_GEO",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Wells_et_al",
       "filtered_feature_bc_matrix_controlwk2",
       "features.tsv.gz"
     ),
     cells = here::here(
-      "scRNA_data_analysis",
-      "Wells_eLife_2020",
-      "raw_data",
-      "raw_GEO",
+      "Thymic_EC_scRNA_reanalysis",
+      "scRNA_data_integration_Wells_and_Michelson",
+      "01_raw_data",
+      "Wells_et_al",
       "filtered_feature_bc_matrix_controlwk2",
       "barcodes.tsv.gz"
     )
@@ -215,10 +215,10 @@ VlnPlot(
 SaveH5Seurat(
   combined,
   here::here(
-    "scRNA_data_analysis",
-    "Wells_eLife_2020",
-    "processed_data",
-    "Wells"
+    "Thymic_EC_scRNA_reanalysis",
+    "scRNA_data_integration_Wells_and_Michelson",
+    "02_processed_data",
+    "Wells_QC"
   ),
   overwrite = TRUE
 )
