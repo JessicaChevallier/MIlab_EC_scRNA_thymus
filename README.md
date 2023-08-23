@@ -10,17 +10,17 @@ Vincentelli 6 , Emmanuel Clave 2,3 , Arnauld Sergé 7 , Martine Cohen-Solal 4,5 
 Magali Irla 8,*
 
 1 Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université,
-Marseille, Turing Centre for Living Systems, Marseille, France
-2 Université de Paris, Institut de Recherche Saint Louis, EMiLy, Inserm U1160, F-75010, Paris, France
-3 Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, Paris France
-4 Université de Paris, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France
-5 Rheumatology Department, AP-HP, Lariboisière Hospital, F-75010 Paris, France
+Marseille, Turing Centre for Living Systems, Marseille, France  
+2 Université de Paris, Institut de Recherche Saint Louis, EMiLy, Inserm U1160, F-75010, Paris, France  
+3 Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, Paris France  
+4 Université de Paris, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France  
+5 Rheumatology Department, AP-HP, Lariboisière Hospital, F-75010 Paris, France  
 6 Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille
-Université, Marseille, France
+Université, Marseille, France  
 7 Laboratoire Adhesion &amp; Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre
-for Living Systems, Marseille, France
-8 Centre d'39;Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université,
-Marseille, Turing Centre for Living Systems, Marseille, France
+for Living Systems, Marseille, France  
+8 Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université,
+Marseille, Turing Centre for Living Systems, Marseille, France  
 
 \* For correspondence: Magali.Irla@inserm.fr
 
@@ -45,18 +45,18 @@ to rejuvenate thymic function and improve T-cell immune function in the elderly.
 ## Repository goal 
 This github repository contains the scripts and dockerfile necessary to reproduce the analyses / figures described in the article. 
 
-### Description of the repository structure
+## Description of the repository structure
 3 main folders
 ```
-DOCKER
-THYMIC_EC_scRNA_RANKL_GST
-THYMIC_EC_scRNA_reanalysis
+Docker
+Thymic_EC_scRNA_RANKL_GST
+Thymic_EC_scRNA_reanalysis
 ```
 Docker: contains the dockerfile and instructions on how to build the docker image and run the container.  
-THYMIC_EC_scRNA_RANKL_GST: contains the scripts to reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**. 
- THYMIC_EC_scRNA_reanalysis: contains the scripts to reproduce the analysis / figures using **publicly available thymic EC datasets**. 
+Thymic_EC_scRNA_RANKL_GST: contains the scripts to reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**. 
+ Thymic_EC_scRNA_reanalysis: contains the scripts to reproduce the analysis / figures using **publicly available thymic EC datasets**. 
 
-The following subdirectories are present
+The following subfolders are present
 ```
 THYMIC_EC_scRNA_RANKL_GST
   00_scripts
@@ -64,7 +64,33 @@ THYMIC_EC_scRNA_RANKL_GST
   02_processed_data
   03_references
   04_figures
+
 THYMIC_EC_scRNA_reanalysis
   Bautista_et_al_Nature_Communications_2021
-  Xia_et_al_Frontiers_Immunology
+   00_scripts
+   01_raw_data
+   02_processed_data
+   03_figures
+  Xia_et_al_Frontiers_Immunology_2019
+   00_scripts
+   01_raw_data
+   02_processed_data
+   03_figures
+  scRNA_data_integration_Wells_and_Michelson
+   00_scripts
+   01_raw_data
+   02_processed_data
+   03_figures
 ```
+00_scripts: subfolder containing all scripts.   
+01_raw_data: subfolder to place the raw data into.  
+02_processed_data: subfolder where the h5Seurat files containing the clustering information will be saved (after the analysis).   
+03_references: subfolder containing csv files necessary for the gene set enrichment analysis.  
+03_figures / 04_figures: subfolder where the figures will be saved.   
+
+**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the 01_raw_data subfolders describes which dataset(s) to download from the GEO database to redo the analysis. 
+***
+## Steps to run the analysis 
+
+**Step 1:**  
+Clone the existing github repository to a new Rstudio project in your chosen folder. In doing so, a folder named "MIlab_EC_scRNA_thymus" will be created along with a "MIlab_EC_scRNA_thymus.Rproj" file. It is recommended to create a new Rstudio project because we will be using the ```here``` package to identify the top-level directory using the .Rproj and build paths relative to it throughout the analysis. 
