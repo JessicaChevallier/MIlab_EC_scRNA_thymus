@@ -147,7 +147,7 @@ In RStudio: File > New Project > Existing Directory > Browse > "MIlab_EC_scRNA_t
 
 **NOTE:** It's **important** to create a new Rstudio project using the cloned git repository because we will be using the ```here``` package to identify the top-level directory (.Rproj file) and build paths relative to it throughout the analysis. This prevents us from using absolute paths and makes switching from one operating system to another easier.  
 
-You can learn more about the ```here``` package in this post: https://software.cqls.oregonstate.edu/tips/posts/r-tips-here-package/#:~:text=The%20here%20package%20builds%20your,top%2Dlevel%20project%20directory).  
+You can learn more about the ```here``` package in this post: https://software.cqls.oregonstate.edu/tips/posts/r-tips-here-package/#:~:text=The%20here%20package%20builds%20your,top%2Dlevel%20project%20directory
 
 **Step 8:**  
 
