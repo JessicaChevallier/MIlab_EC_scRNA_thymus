@@ -71,7 +71,7 @@ THYMIC_EC_scRNA_reanalysis
    01_raw_data
    02_processed_data
    03_figures
-  Xia_et_al_Frontiers_Immunology_2019
+  Xia_et_al_Frontiers_Immunology_2021
    00_scripts
    01_raw_data
    02_processed_data
@@ -102,7 +102,21 @@ Set the variable WORKING_DIR, using the path to the "MIlab_EC_scRNA_thymus" fold
 ```
 export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 ```
-**Step 3:**  
+**Step 3:**    
+
+Download raw data from the GEO database and place it in the **01_raw_data** subfolders. The **README.txt** files in each 01_raw_data subfolder tells you which raw data needs to be downloaded.  
+
+Raw data generate in this study can be downloaded **here**:  
+As a quick summary, we utilized the publicly available datasets below. 
+
+| Author(s) | Year | Dataset title | Datatset URL | Database and Identifier  
+| :---: | :---: | :---: | :---: | :---:
+| Michelson DA., et al. | 2022 | Thymic epithelial cells co-opt lineage-defining transcription factors to eliminate autoreactive T cells| https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194253| NCBI Gene Expression Omnibus, GSE194253
+| Xia, Huan., et al. | 2021 | T cell derived LTR signal regulates thymic egress via distinct thymic portal endothelial cells| https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174732 | NCBI Gene Expression Omnibus, GSE174732
+| Bautista JL., et al. | 2021 | Single-cell RNA sequencing of human thymic samples| https://www.ncbi.nlm.nih.gov/geo/query/acc.cgiacc=GSE147520 | NCBI Gene Expression Omnibus, GSE147520 
+|Wells KL., et al. | 2020 | Single cell sequencing defines a branched progenitor population of stable medullary thymic epithelial cells|  https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137699 | NCBI Gene Expression Omnibus, GSE137699 
+
+**Step 4:**    
 
 Install Docker: https://docs.docker.com/engine/install/  
 Build an image from the Dockerfile by running the following.  
@@ -110,7 +124,7 @@ Build an image from the Dockerfile by running the following.
 cd $WORKING_DIR/Docker
 sudo docker build -t scrna_data_analysis .
 ```
-**Step 4:**  
+**Step 5:**    
 
 Run the container using the previously built image.   
 Before running the command replace \<PASSWORD\> with a password of your choice that will be used to login to the Rstudio server.  
@@ -118,7 +132,19 @@ Before running the command replace \<PASSWORD\> with a password of your choice t
 ```
 sudo docker run --rm --name cont_scrna_data_analysis -d -p 8888:8787 -v /$WORKING_DIR:/$WORKING_DIR -e PASSWORD=<PASSWORD> -e USER=$(whoami) -e USERID=$(id -u) -e GROUPID=$(id -g) scrna_data_analysis
 ```
-**Step 5:**
-Using the README.txt files in each 01_raw_data subfolders download the  
+**Step 6:**  
 
-In doing so, a folder named "MIlab_EC_scRNA_thymus" will be created along with a "MIlab_EC_scRNA_thymus.Rproj" file. It is recommended to create a new Rstudio project because we will be using the ```here``` package to identify the top-level directory using the .Rproj and build paths relative to it throughout the analysis. 
+Connect to the Rstudio server. In an Internet browser, type as a url : http://127.0.0.1:8888   
+Use the name of the user session your are working with and your chosen password to login. 
+
+**Step7:**  
+
+Create a new Rstudio project using the directory to the "MIlab_EC_scRNA_thymus" as the Existing Directory. In doing so, a "MIlab_EC_scRNA_thymus.Rproj" file will be created.   
+
+```
+In RStudio: File > New Project > Existing Directory > Browse > "MIlab_EC_scRNA_thymus" > Select Folder > Create Project
+```
+
+**NOTE:** It's **important** to create a new Rstudio project using the cloned git repository because we will be using the ```here``` package to identify the top-level directory using the .Rproj and build paths relative to it throughout the analysis. This prevents us from using absolute paths and makes switching from one operating system to another easier.  
+
+You can learn more about the ```here``` package in this post: https://software.cqls.oregonstate.edu/tips/posts/r-tips-here-package/#:~:text=The%20here%20package%20builds%20your,top%2Dlevel%20project%20directory).
