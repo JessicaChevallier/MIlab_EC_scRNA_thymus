@@ -35,7 +35,7 @@ RUN R -e "install.packages('Seurat', version = '4.3.0', dependencies = T)"
 RUN R -e "BiocManager::install('dittoSeq', dependencies = T)"
 RUN R -e "install.packages('rsvd', dependencies= T)" # Necessary for seurat-wrapper
 
-# Increase timeout for github archive download without timeout failed
+# Increase timeout for github archive download without "timeout fail"
 RUN R -e 'options(download.file.method = "libcurl", url.method = "libcurl", timeout = 10000000000)'
 
 # Install packages using devtools
@@ -44,7 +44,7 @@ RUN R -e "devtools::install_github('chris-mcginnis-ucsf/DoubletFinder')"
 RUN R -e "devtools::install_github('powellgenomicslab/Nebulosa')"
 RUN R -e "devtools::install_github('jokergoo/ComplexHeatmap')"
 
-# Install 'glmGamPoi' to use advance arguments in the Seurat SCTransform
+# Install 'glmGamPoi' to use advance arguments in the Seurat SCTransform function
 RUN R -e "BiocManager::install('glmGamPoi', dependencies = T)"
 
 # Install seurat-wrapper by downloading the package link and installing it manually because "devtools::install_github('satijalab/seurat-wrappers')" does not work
@@ -59,4 +59,3 @@ RUN apt-get update && apt-get install -y build-essential openssh-client
 
 # Rstudio listens on port 8787 by default
 EXPOSE 8787
-
