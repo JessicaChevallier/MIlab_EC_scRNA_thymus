@@ -157,7 +157,7 @@ In the Rstudio session, open the "MIlab_EC_scRNA_thymus.Rproj" file and run the 
 ```
 library(here)
 ```
-You should see something similar to this, where the path points to the "MIlab_EC_scRNA_thymus" folder on your computer.  
+You should see something similar to this, listing the path to the "MIlab_EC_scRNA_thymus" folder on your computer.  
 
 ```
 here() starts at /home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus  
