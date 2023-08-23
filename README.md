@@ -92,5 +92,33 @@ THYMIC_EC_scRNA_reanalysis
 ***
 ## Steps to run the analysis 
 
-**Step 1:**  
-Clone the existing github repository to a new Rstudio project in your chosen folder. In doing so, a folder named "MIlab_EC_scRNA_thymus" will be created along with a "MIlab_EC_scRNA_thymus.Rproj" file. It is recommended to create a new Rstudio project because we will be using the ```here``` package to identify the top-level directory using the .Rproj and build paths relative to it throughout the analysis. 
+**Step 1:**    
+
+Clone the github repository in your chosen folder. A folder called "MIlab_EC_scRNA_thymus" will be created.     
+
+**Step 2:**  
+
+Set the variable WORKING_DIR, using the path to the "MIlab_EC_scRNA_thymus" folder as your value. 
+```
+export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
+```
+**Step 3:**  
+
+Install Docker: https://docs.docker.com/engine/install/  
+Build an image from the Dockerfile by running the following.  
+```
+cd $WORKING_DIR/Docker
+sudo docker build -t scrna_data_analysis .
+```
+**Step 4:**  
+
+Run the container using the previously built image.   
+Before running the command replace \<PASSWORD\> with a password of your choice that will be used to login to the Rstudio server.  
+
+```
+sudo docker run --rm --name cont_scrna_data_analysis -d -p 8888:8787 -v /$WORKING_DIR:/$WORKING_DIR -e PASSWORD=<PASSWORD> -e USER=$(whoami) -e USERID=$(id -u) -e GROUPID=$(id -g) scrna_data_analysis
+```
+**Step 5:**
+Using the README.txt files in each 01_raw_data subfolders download the  
+
+In doing so, a folder named "MIlab_EC_scRNA_thymus" will be created along with a "MIlab_EC_scRNA_thymus.Rproj" file. It is recommended to create a new Rstudio project because we will be using the ```here``` package to identify the top-level directory using the .Rproj and build paths relative to it throughout the analysis. 
