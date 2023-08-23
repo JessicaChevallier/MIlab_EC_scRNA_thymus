@@ -106,7 +106,7 @@ export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 
 Download raw data from the GEO database and place it in the **01_raw_data** subfolders. The **README.txt** files in each 01_raw_data subfolder tells you which raw data needs to be downloaded.  
 
-Raw data generate in this study can be downloaded **here**:  
+Raw data generated in this study can be downloaded **here**:  
 As a quick summary, we utilized the publicly available datasets below. 
 
 | Author(s) | Year | Dataset title | Datatset URL | Database and Identifier  
@@ -134,12 +134,12 @@ sudo docker run --rm --name cont_scrna_data_analysis -d -p 8888:8787 -v /$WORKIN
 ```
 **Step 6:**  
 
-Connect to the Rstudio server. In an Internet browser, type as a url : http://127.0.0.1:8888   
+In an Internet browser, use the url : http://127.0.0.1:8888 to connect to the Rstudio server.   
 Use the name of the user session your are working with and your chosen password to login. 
 
 **Step 7:**  
 
-Create a new Rstudio project using the directory to the "MIlab_EC_scRNA_thymus" folder as your Existing Directory. In doing so, a **"MIlab_EC_scRNA_thymus.Rproj"** file will be created.   
+Create a new Rstudio project using the path to the "MIlab_EC_scRNA_thymus" folder as your Existing Directory. In doing so, a **"MIlab_EC_scRNA_thymus.Rproj"** file will be created.   
 
 ```
 In RStudio: File > New Project > Existing Directory > Browse > "MIlab_EC_scRNA_thymus" > Select Folder > Create Project
