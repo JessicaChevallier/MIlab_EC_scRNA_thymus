@@ -52,9 +52,9 @@ Docker
 Thymic_EC_scRNA_RANKL_GST
 Thymic_EC_scRNA_reanalysis
 ```
-Docker: contains the dockerfile and instructions on how to build the docker image and run the container.  
-Thymic_EC_scRNA_RANKL_GST: reproduce the analyses / figures using the **RANKL- GST- scRNA-seq dataset**.  
-Thymic_EC_scRNA_reanalysis: reproduce the analyses / figures using **publicly available thymic EC datasets**. 
+```Docker```: contains the dockerfile and instructions on how to build the docker image and run the container.  
+```Thymic_EC_scRNA_RANKL_GST```: reproduce the analyses / figures using the **RANKL- GST- scRNA-seq dataset**.  
+```Thymic_EC_scRNA_reanalysis```: reproduce the analyses / figures using **publicly available thymic EC datasets**. 
 
 *The following subfolders are present*
 ```
@@ -82,13 +82,13 @@ THYMIC_EC_scRNA_reanalysis
    02_processed_data
    03_figures
 ```
-00_scripts: subfolder containing all scripts to reproduce the analyses / figures.   
-01_raw_data: subfolder to place the raw data into.  
-02_processed_data: subfolder where the h5Seurat files containing the clustering information will be saved.   
-03_references: subfolder containing csv files necessary for the gene set enrichment analysis.  
-03_figures / 04_figures: subfolder where the figures will be saved.   
+```00_scripts```: subfolder containing all scripts to reproduce the analyses / figures.   
+```01_raw_data```: subfolder to place the raw data into.  
+```02_processed_data```: subfolder where the h5Seurat files containing the clustering information will be saved.   
+```03_references```: subfolder containing csv files necessary for the gene set enrichment analysis.  
+```03_figures``` / ```04_figures```: subfolder where the figures will be saved.   
 
-**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the 01_raw_data subfolders describes which dataset(s) to download from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) to redo the analysis. 
+**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the ```01_raw_data``` subfolders describes which dataset(s) to download from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) to redo the analysis. 
 ***
 ## Steps to run the analysis 
 
@@ -104,7 +104,7 @@ export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 ```
 **Step 3:**    
 
-Download raw data from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) and place it in the **01_raw_data** subfolders. The **README.txt** files in each 01_raw_data subfolder tells you which raw data needs to be downloaded.  
+Download raw data from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) and place it in the **```01_raw_data```** subfolders. The **README.txt** files in each **```01_raw_data```** subfolder tells you which raw data needs to be downloaded.  
 
 Raw data generated in this study can be downloaded **here**:  
 As a quick summary, we utilized the publicly available datasets below. 
@@ -166,4 +166,4 @@ here() starts at /home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 
 Everything is now set for you to run the analyses.   
 Go to the folder of your choice and start exploring.    
-**NOTE**: All scripts in the 00_scripts subfolders are ordered numerically and should be run as so.    
+**NOTE**: All scripts in the ```00_scripts``` subfolders are ordered numerically and should be run as so.    
