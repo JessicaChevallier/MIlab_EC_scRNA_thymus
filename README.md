@@ -46,7 +46,7 @@ to rejuvenate thymic function and improve T-cell immune function in the elderly.
 This github repository contains the scripts and dockerfile necessary to reproduce the analyses / figures described in the article. 
 
 ## Description of the repository structure
-3 main folders
+*3 main folders*
 ```
 Docker
 Thymic_EC_scRNA_RANKL_GST
@@ -56,7 +56,7 @@ Docker: contains the dockerfile and instructions on how to build the docker imag
 Thymic_EC_scRNA_RANKL_GST: reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**.  
 Thymic_EC_scRNA_reanalysis: reproduce the analysis / figures using **publicly available thymic EC datasets**. 
 
-The following subfolders are present
+*The following subfolders are present*
 ```
 THYMIC_EC_scRNA_RANKL_GST
   00_scripts
@@ -137,14 +137,32 @@ sudo docker run --rm --name cont_scrna_data_analysis -d -p 8888:8787 -v /$WORKIN
 Connect to the Rstudio server. In an Internet browser, type as a url : http://127.0.0.1:8888   
 Use the name of the user session your are working with and your chosen password to login. 
 
-**Step7:**  
+**Step 7:**  
 
-Create a new Rstudio project using the directory to the "MIlab_EC_scRNA_thymus" as the Existing Directory. In doing so, a "MIlab_EC_scRNA_thymus.Rproj" file will be created.   
+Create a new Rstudio project using the directory to the "MIlab_EC_scRNA_thymus" folder as your Existing Directory. In doing so, a **"MIlab_EC_scRNA_thymus.Rproj"** file will be created.   
 
 ```
 In RStudio: File > New Project > Existing Directory > Browse > "MIlab_EC_scRNA_thymus" > Select Folder > Create Project
 ```
 
-**NOTE:** It's **important** to create a new Rstudio project using the cloned git repository because we will be using the ```here``` package to identify the top-level directory using the .Rproj and build paths relative to it throughout the analysis. This prevents us from using absolute paths and makes switching from one operating system to another easier.  
+**NOTE:** It's **important** to create a new Rstudio project using the cloned git repository because we will be using the ```here``` package to identify the top-level directory (.Rproj file) and build paths relative to it throughout the analysis. This prevents us from using absolute paths and makes switching from one operating system to another easier.  
 
-You can learn more about the ```here``` package in this post: https://software.cqls.oregonstate.edu/tips/posts/r-tips-here-package/#:~:text=The%20here%20package%20builds%20your,top%2Dlevel%20project%20directory).
+You can learn more about the ```here``` package in this post: https://software.cqls.oregonstate.edu/tips/posts/r-tips-here-package/#:~:text=The%20here%20package%20builds%20your,top%2Dlevel%20project%20directory).  
+
+**Step 8:**  
+
+We're almost ready to run the analyses!  
+In the Rstudio session, open the "MIlab_EC_scRNA_thymus.Rproj" file and run the following in the console.  
+
+```
+library(here)
+```
+You should see something similar to this, where the path points to the "MIlab_EC_scRNA_thymus" folder on your computer.  
+
+```
+here() starts at /home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus  
+```
+**Step 9:**  
+
+Everything has been set up for you to run the analysis of your choice. Go to the folder of your choice and start exploring.  
+**NOTE**: All scripts in the 00_scripts subfolders are ordered numerically and should be run as so.    
