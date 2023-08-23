@@ -46,7 +46,7 @@ to rejuvenate thymic function and improve T-cell immune function in the elderly.
 This github repository contains the scripts and dockerfile necessary to reproduce the analyses / figures described in the article. 
 
 ## Description of the repository structure
-3 main folders
+*3 main folders*
 ```
 Docker
 Thymic_EC_scRNA_RANKL_GST
@@ -56,7 +56,7 @@ Docker: contains the dockerfile and instructions on how to build the docker imag
 Thymic_EC_scRNA_RANKL_GST: reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**.  
 Thymic_EC_scRNA_reanalysis: reproduce the analysis / figures using **publicly available thymic EC datasets**. 
 
-The following subfolders are present
+*The following subfolders are present*
 ```
 THYMIC_EC_scRNA_RANKL_GST
   00_scripts
@@ -71,7 +71,7 @@ THYMIC_EC_scRNA_reanalysis
    01_raw_data
    02_processed_data
    03_figures
-  Xia_et_al_Frontiers_Immunology_2019
+  Xia_et_al_Frontiers_Immunology_2021
    00_scripts
    01_raw_data
    02_processed_data
@@ -92,5 +92,78 @@ THYMIC_EC_scRNA_reanalysis
 ***
 ## Steps to run the analysis 
 
-**Step 1:**  
-Clone the existing github repository to a new Rstudio project in your chosen folder. In doing so, a folder named "MIlab_EC_scRNA_thymus" will be created along with a "MIlab_EC_scRNA_thymus.Rproj" file. It is recommended to create a new Rstudio project because we will be using the ```here``` package to identify the top-level directory using the .Rproj and build paths relative to it throughout the analysis. 
+**Step 1:**    
+
+Clone the github repository in your chosen folder. A folder called "MIlab_EC_scRNA_thymus" will be created.     
+
+**Step 2:**  
+
+Set the variable WORKING_DIR, using the path to the "MIlab_EC_scRNA_thymus" folder as your value. 
+```
+export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
+```
+**Step 3:**    
+
+Download raw data from the GEO database and place it in the **01_raw_data** subfolders. The **README.txt** files in each 01_raw_data subfolder tells you which raw data needs to be downloaded.  
+
+Raw data generate in this study can be downloaded **here**:  
+As a quick summary, we utilized the publicly available datasets below. 
+
+| Author(s) | Year | Dataset title | Datatset URL | Database and Identifier  
+| :---: | :---: | :---: | :---: | :---:
+| Michelson DA., et al. | 2022 | Thymic epithelial cells co-opt lineage-defining transcription factors to eliminate autoreactive T cells| https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194253| NCBI Gene Expression Omnibus, GSE194253
+| Xia, Huan., et al. | 2021 | T cell derived LTR signal regulates thymic egress via distinct thymic portal endothelial cells| https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174732 | NCBI Gene Expression Omnibus, GSE174732
+| Bautista JL., et al. | 2021 | Single-cell RNA sequencing of human thymic samples| https://www.ncbi.nlm.nih.gov/geo/query/acc.cgiacc=GSE147520 | NCBI Gene Expression Omnibus, GSE147520 
+|Wells KL., et al. | 2020 | Single cell sequencing defines a branched progenitor population of stable medullary thymic epithelial cells|  https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137699 | NCBI Gene Expression Omnibus, GSE137699 
+
+**Step 4:**    
+
+Install Docker: https://docs.docker.com/engine/install/  
+Build an image from the Dockerfile by running the following.  
+```
+cd $WORKING_DIR/Docker
+sudo docker build -t scrna_data_analysis .
+```
+**Step 5:**    
+
+Run the container using the previously built image.   
+Before running the command replace \<PASSWORD\> with a password of your choice that will be used to login to the Rstudio server.  
+
+```
+sudo docker run --rm --name cont_scrna_data_analysis -d -p 8888:8787 -v /$WORKING_DIR:/$WORKING_DIR -e PASSWORD=<PASSWORD> -e USER=$(whoami) -e USERID=$(id -u) -e GROUPID=$(id -g) scrna_data_analysis
+```
+**Step 6:**  
+
+Connect to the Rstudio server. In an Internet browser, type as a url : http://127.0.0.1:8888   
+Use the name of the user session your are working with and your chosen password to login. 
+
+**Step 7:**  
+
+Create a new Rstudio project using the directory to the "MIlab_EC_scRNA_thymus" folder as your Existing Directory. In doing so, a **"MIlab_EC_scRNA_thymus.Rproj"** file will be created.   
+
+```
+In RStudio: File > New Project > Existing Directory > Browse > "MIlab_EC_scRNA_thymus" > Select Folder > Create Project
+```
+
+**NOTE:** It's **important** to create a new Rstudio project using the cloned git repository because we will be using the ```here``` package to identify the top-level directory (.Rproj file) and build paths relative to it throughout the analysis. This prevents us from using absolute paths and makes switching from one operating system to another easier.  
+
+You can learn more about the ```here``` package in this post: https://software.cqls.oregonstate.edu/tips/posts/r-tips-here-package/#:~:text=The%20here%20package%20builds%20your,top%2Dlevel%20project%20directory
+
+**Step 8:**  
+
+We're almost ready to run the analyses!  
+In the Rstudio session, open the "MIlab_EC_scRNA_thymus.Rproj" file and run the following in the console.  
+
+```
+library(here)
+```
+You should see something similar to this, listing the path to the "MIlab_EC_scRNA_thymus" folder on your computer.  
+
+```
+here() starts at /home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus  
+```
+**Step 9:**  
+
+Everything has been set up for you to run the analysis.   
+Go to the folder of your choice and start exploring.    
+**NOTE**: All scripts in the 00_scripts subfolders are ordered numerically and should be run as so.    
