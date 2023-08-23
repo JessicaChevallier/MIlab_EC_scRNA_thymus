@@ -46,8 +46,8 @@ sudo docker stop cont_scrna_data_analysis
             INFO
 # ############################
 
-# Check to see if containers are running
+# See what containers are running. 
 sudo docker ps
 
-# Check to see if images remain
+# Get a list of built images. 
 sudo docker images
