@@ -53,8 +53,8 @@ Thymic_EC_scRNA_RANKL_GST
 Thymic_EC_scRNA_reanalysis
 ```
 Docker: contains the dockerfile and instructions on how to build the docker image and run the container.  
-Thymic_EC_scRNA_RANKL_GST: reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**.  
-Thymic_EC_scRNA_reanalysis: reproduce the analysis / figures using **publicly available thymic EC datasets**. 
+Thymic_EC_scRNA_RANKL_GST: reproduce the analyses / figures using the **RANKL- GST- scRNA-seq dataset**.  
+Thymic_EC_scRNA_reanalysis: reproduce the analyses / figures using **publicly available thymic EC datasets**. 
 
 *The following subfolders are present*
 ```
@@ -82,29 +82,29 @@ THYMIC_EC_scRNA_reanalysis
    02_processed_data
    03_figures
 ```
-00_scripts: subfolder containing all scripts.   
+00_scripts: subfolder containing all scripts to reproduce the analyses / figures.   
 01_raw_data: subfolder to place the raw data into.  
 02_processed_data: subfolder where the h5Seurat files containing the clustering information will be saved.   
 03_references: subfolder containing csv files necessary for the gene set enrichment analysis.  
 03_figures / 04_figures: subfolder where the figures will be saved.   
 
-**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the 01_raw_data subfolders describes which dataset(s) to download from the GEO database to redo the analysis. 
+**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the 01_raw_data subfolders describes which dataset(s) to download from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) to redo the analysis. 
 ***
 ## Steps to run the analysis 
 
 **Step 1:**    
 
-Clone the github repository in your chosen folder. A folder called "MIlab_EC_scRNA_thymus" will be created.     
+Clone the github repository into your chosen folder. A folder called "MIlab_EC_scRNA_thymus" will be created.     
 
 **Step 2:**  
 
-Set the variable WORKING_DIR, using the path to the "MIlab_EC_scRNA_thymus" folder as your value. 
+Set the variable WORKING_DIR using the path to the "MIlab_EC_scRNA_thymus" folder as your value. 
 ```
 export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 ```
 **Step 3:**    
 
-Download raw data from the GEO database and place it in the **01_raw_data** subfolders. The **README.txt** files in each 01_raw_data subfolder tells you which raw data needs to be downloaded.  
+Download raw data from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) and place it in the **01_raw_data** subfolders. The **README.txt** files in each 01_raw_data subfolder tells you which raw data needs to be downloaded.  
 
 Raw data generated in this study can be downloaded **here**:  
 As a quick summary, we utilized the publicly available datasets below. 
@@ -119,7 +119,7 @@ As a quick summary, we utilized the publicly available datasets below.
 **Step 4:**    
 
 Install Docker: https://docs.docker.com/engine/install/  
-Build an image from the Dockerfile by running the following.  
+Build an image from the Dockerfile by running the following in your terminal.  
 ```
 cd $WORKING_DIR/Docker
 sudo docker build -t scrna_data_analysis .
