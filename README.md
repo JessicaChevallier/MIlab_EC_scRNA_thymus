@@ -88,7 +88,7 @@ THYMIC_EC_scRNA_reanalysis
 ```03_references```: subfolder containing csv files necessary for the gene set enrichment analysis.  
 ```03_figures``` / ```04_figures```: subfolder where the figures will be saved.   
 
-**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the ```01_raw_data``` subfolders describes which dataset(s) to download from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) to redo the analysis. 
+**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the ```01_raw_data``` subfolders describes which dataset(s) to download from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) to redo the analyses. 
 ***
 ## Steps to run the analysis 
 
