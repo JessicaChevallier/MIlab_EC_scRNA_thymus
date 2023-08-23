@@ -164,6 +164,6 @@ here() starts at /home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 ```
 **Step 9:**  
 
-Everything has been set up for you to run the analysis of your choice.  
+Everything has been set up for you to run the analysis.   
 Go to the folder of your choice and start exploring.    
 **NOTE**: All scripts in the 00_scripts subfolders are ordered numerically and should be run as so.    
