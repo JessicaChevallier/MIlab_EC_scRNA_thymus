@@ -8,7 +8,7 @@ This image contains:
 # ############################
  
 # Set a working directory variable. 
-# Your directory should be where you have chosen to clone the github repository.
+# Your working directory should be where you plan to clone the github repository. 
 
 export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab
 
