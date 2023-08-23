@@ -16,7 +16,7 @@ export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab
         BUILD THE IMAGE
 # ############################
 
-# cd to the directory containing the docker file
+# cd to the directory containing the docker file and run the following: 
 
 sudo docker build -t scrna_data_analysis .
 
