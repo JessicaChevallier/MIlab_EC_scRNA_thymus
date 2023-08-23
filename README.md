@@ -53,8 +53,8 @@ Thymic_EC_scRNA_RANKL_GST
 Thymic_EC_scRNA_reanalysis
 ```
 Docker: contains the dockerfile and instructions on how to build the docker image and run the container.  
-Thymic_EC_scRNA_RANKL_GST: contains the scripts to reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**. 
- Thymic_EC_scRNA_reanalysis: contains the scripts to reproduce the analysis / figures using **publicly available thymic EC datasets**. 
+Thymic_EC_scRNA_RANKL_GST: contains the scripts to reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**.  
+Thymic_EC_scRNA_reanalysis: contains the scripts to reproduce the analysis / figures using **publicly available thymic EC datasets**. 
 
 The following subfolders are present
 ```
@@ -84,7 +84,7 @@ THYMIC_EC_scRNA_reanalysis
 ```
 00_scripts: subfolder containing all scripts.   
 01_raw_data: subfolder to place the raw data into.  
-02_processed_data: subfolder where the h5Seurat files containing the clustering information will be saved (after the analysis).   
+02_processed_data: subfolder where the h5Seurat files containing the clustering information will be saved.   
 03_references: subfolder containing csv files necessary for the gene set enrichment analysis.  
 03_figures / 04_figures: subfolder where the figures will be saved.   
 
