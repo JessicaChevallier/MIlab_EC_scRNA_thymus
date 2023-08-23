@@ -53,8 +53,8 @@ Thymic_EC_scRNA_RANKL_GST
 Thymic_EC_scRNA_reanalysis
 ```
 Docker: contains the dockerfile and instructions on how to build the docker image and run the container.  
-Thymic_EC_scRNA_RANKL_GST: contains the scripts to reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**.  
-Thymic_EC_scRNA_reanalysis: contains the scripts to reproduce the analysis / figures using **publicly available thymic EC datasets**. 
+Thymic_EC_scRNA_RANKL_GST: code reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**.  
+Thymic_EC_scRNA_reanalysis: code to reproduce the analysis / figures using **publicly available thymic EC datasets**. 
 
 The following subfolders are present
 ```
