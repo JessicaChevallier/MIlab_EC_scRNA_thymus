@@ -7,14 +7,14 @@ RANKL treatment rejuvenates thymic function and improves T-cell immune responses
 ### Authors:
 Jérémy C Santamaria 1 Jessica Chevallier 1, Léa Dutour 2, Amandine Picart 3,4, Renaud Vincentelli 5, Emmanuel Clave 2, Arnauld Sergé 6, Martine Cohen-Solal 3,4, Antoine Toubert 2,7, Magali Irla 8,*
 
-1 Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France
-2 Université de Paris, Institut de Recherche Saint Louis, EMiLy, Inserm UMRS 1160, F-75010, Paris, France
-3 Université de Paris, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France
-4 Rheumatology Department, AP-HP, Lariboisière Hospital, F-75010 Paris, France
-5 Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille Université, Marseille, France
-6 Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France
-7 Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, Paris France
-8 Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France 
+1 Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France  
+2 Université de Paris, Institut de Recherche Saint Louis, EMiLy, Inserm UMRS 1160, F-75010, Paris, France  
+3 Université de Paris, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France  
+4 Rheumatology Department, AP-HP, Lariboisière Hospital, F-75010 Paris, France  
+5 Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille Université, Marseille, France  
+6 Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France  
+7 Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, Paris France  
+8 Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France   
  
 \* For correspondence: Magali.Irla@inserm.fr
 
