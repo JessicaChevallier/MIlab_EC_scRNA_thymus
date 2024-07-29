@@ -156,9 +156,7 @@ pathway_stats_df = pathway_stats_df[, c("cell_types",
                                         ".y.")]
 
 
-# GENE SET 2 (RANK_response_gene_set)
-
-# Select the column gene_endo_factor8 which corresponds to the 
+# GENE SET 2 (RANK response gene set)
 
 # Keep common genes
 RANK_response_gene_set$X <- gsub('\\s+', '', RANK_response_gene_set$X) # Remove white space from the gene column
