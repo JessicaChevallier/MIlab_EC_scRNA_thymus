@@ -8,6 +8,9 @@ library(SeuratDisk)
 library(scCustomize)
 library(scuttle)
 library(dittoSeq)
+library(pheatmap)
+library(escape)
+library(msigdbr)
 
 # Load the Seurat object containing the EC subclustering information
 EC_data <- LoadH5Seurat(here::here(
@@ -102,6 +105,137 @@ ggsave(
   dotplot_cell_types,
   dpi = 500
 )
+
+# Heatmap of enrichment pathways
+
+chosen_pathways <-
+  c(
+    "BIOCARTA_AKT_PATHWAY",
+    "BIOCARTA_P38MAPK_PATHWAY",
+    "REACTOME_MAPK_FAMILY_SIGNALING_CASCADES",
+    "REACTOME_ACTIVATED_TAK1_MEDIATES_P38_MAPK_ACTIVATION",
+    "BIOCARTA_NFKB_PATHWAY",
+    "REACTOME_TNF_RECEPTOR_SUPERFAMILY_TNFSF_MEMBERS_MEDIATING_NON_CANONICAL_NF_KB_PATHWAY",
+    "REACTOME_NF_KB_IS_ACTIVATED_AND_SIGNALS_SURVIVAL",
+    "REACTOME_TAK1_ACTIVATES_NFKB_BY_PHOSPHORYLATION_AND_ACTIVATION_OF_IKKS_COMPLEX",
+    "REACTOME_TRAF6_MEDIATED_NF_KB_ACTIVATION"
+  )
+
+# Retrieve genes for each pathway above
+gene_sets <- msigdbr(species = "mouse", category = "C2")
+genes_per_pathway <- split(gene_sets$gene_symbol, gene_sets$gs_name)
+gene_sets <- gene_sets[gene_sets$gs_name %in% chosen_pathways,]
+genes_per_pathway <- split(gene_sets$gene_symbol, gene_sets$gs_name)
+
+# Rename clusters
+EC_data[["combined_cell_types"]] <- NA
+
+subsets <- list(
+  "Capillary" = c("Capillary 1", "Capillary 2"),
+  "Choroid plexus like EC" = "Choroid plexus like EC",
+  "Arterial" = "Arterial",
+  "Venous" = c("Venous 1", "Venous 2")
+)
+
+for (list_name in names(subsets)) {
+  EC_data$combined_cell_types[which(EC_data@active.ident %in% subsets[[list_name]])] <-
+    list_name
+}
+
+# Check the cell types are renamed correctly 
+Idents(EC_data) <- "combined_cell_types"
+DimPlot(EC_data) 
+
+# Calculate enrichment scores per cell per cluster per condition
+ES <- enrichIt(
+  obj = EC_data,
+  gene.sets = genes_per_pathway,
+  method = "ssGSEA",
+  groups = 1000,
+  cores = 4,
+  min.size = 10
+)
+
+# Add the info as a metadata slot in the Seurat object
+EC_data <- AddMetaData(EC_data, ES)
+EC_data@meta.data$active.idents <- EC_data@active.ident
+
+# Prepare the data for the heatmap
+EC_data$cluster_cnd <-
+  paste0(EC_data$combined_cell_types, " ", EC_data$sample)
+
+
+Idents(EC_data) <- EC_data$cluster_cnd # Change active ident
+
+meta <- EC_data[["cluster_cnd"]]
+meta <- merge(meta, ES, by = "row.names")
+
+heatmap <- meta[, c("cluster_cnd", colnames(ES))]
+melted <- reshape2::melt(heatmap, id.vars = c("cluster_cnd"))
+medianvalues <- melted %>%
+  group_by(cluster_cnd, variable) %>%
+  summarise(median(value))
+
+matrix <- reshape2::dcast(medianvalues, cluster_cnd ~ variable)
+rownames(matrix) <- matrix[, 1]
+matrix <- matrix[, -1]
+
+# Reorder the cell types in the heatmap
+col_order <- c(
+  "Venous GST",
+  "Venous RANKL",
+  "Choroid plexus like EC GST",
+  "Choroid plexus like EC RANKL",
+  "Arterial GST",
+  "Arterial RANKL",
+  "Capillary GST",
+  "Capillary RANKL"
+)
+
+# Order rows
+matrix_ordered <- matrix %>%
+  arrange(factor(rownames(matrix), levels = col_order))
+
+# Order columns
+matrix_ordered <- matrix_ordered[, chosen_pathways]
+
+# Build heatmap annotations
+x <- c("GST", "RANKL")
+samp_annot <- data.frame(sample = rep(x, times = 4))
+rownames(samp_annot) <- rownames(matrix_ordered)
+
+rownames(samp_annot) <- rownames(matrix_ordered)
+ann_colors = list(sample = c("GST" = "#ADDD8E", "RANKL" = "#006837"))
+
+# Color scale
+col <- rev(colorRampPalette(brewer.pal(10, "RdYlBu"))(256))
+
+# Save the heatmap 
+pdf(
+  file = here::here(
+    "Thymic_EC_scRNA_RANKL_GST",
+    "04_figures",
+    "enriched_pathways.pdf"
+  ),
+  width = 28,
+  height = 16
+)
+
+pheatmap(
+  t(matrix_ordered),
+  color = col,
+  scale = "row",
+  fontsize = 25,
+  cluster_rows = F,
+  cluster_cols = F, 
+  clustering_distance_rows = "none",
+  angle_col = 90, 
+  annotation_col = samp_annot, 
+  annotation_colors = ann_colors,
+  border_color = NA 
+)
+
+dev.off()
 
 # Heatmap HEV (High endothelial venules): clusters venous 1 and 2 per condition
 
@@ -263,3 +397,31 @@ dittoHeatmap(
 )
 
 dev.off()
+
+# RANK (Tnfrsf11a) density plot
+
+genes <- c("Tnfrsf11a")
+
+for (gene in genes) {
+  plot <- plot_density(
+    EC_data,
+    features = gene,
+    joint = FALSE,
+    pal = "plasma",
+    slot = "data"
+  )
+  print(plot)
+  ggsave(
+    file = here::here(
+      "Thymic_EC_scRNA_RANKL_GST",
+      "04_figures",
+      paste0(gene, "_density_EC.png")
+    ),
+    width = 6,
+    height = 5,
+    units = "in",
+    device = "png",
+    dpi = 500
+  )
+  dev.off()
+}
