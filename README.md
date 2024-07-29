@@ -5,38 +5,23 @@
 RANKL treatment rejuvenates thymic function and improves T-cell immune responses during aging
 
 ### Authors:
-Jérémy C Santamaria 1 Jessica Chevallier 1 , Léa Dutour 2,3 , Amandine Picart 4,5 , Renaud
-Vincentelli 6 , Emmanuel Clave 2,3 , Arnauld Sergé 7 , Martine Cohen-Solal 4,5 , Antoine Toubert 2,3 ,
-Magali Irla 8,*
+Jérémy C Santamaria $$1$$, Jessica Chevallier $$1$$, Léa Dutour $$2$$, Amandine Picart $${3,4}$$, Renaud Vincentelli $$5$$, Emmanuel Clave $$2$$, Arnauld Sergé $$6$$, Martine Cohen-Solal $${3,4}$$, Antoine Toubert $${2,7}$$, Magali Irla $${8,*}$$
 
-1 Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université,
-Marseille, Turing Centre for Living Systems, Marseille, France  
-2 Université de Paris, Institut de Recherche Saint Louis, EMiLy, Inserm U1160, F-75010, Paris, France  
-3 Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, Paris France  
-4 Université de Paris, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France  
-5 Rheumatology Department, AP-HP, Lariboisière Hospital, F-75010 Paris, France  
-6 Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille
-Université, Marseille, France  
-7 Laboratoire Adhesion &amp; Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre
-for Living Systems, Marseille, France  
-8 Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université,
-Marseille, Turing Centre for Living Systems, Marseille, France  
-
+$$1$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France  
+$$2$$ Université de Paris, Institut de Recherche Saint Louis, EMiLy, Inserm UMRS 1160, F-75010, Paris, France  
+$$3$$ Université de Paris, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France  
+$$4$$ Rheumatology Department, AP-HP, Lariboisière Hospital, F-75010 Paris, France  
+$$5$$ Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille Université, Marseille, France  
+$$6$$ Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France  
+$$7$$ Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, Paris France  
+$$8$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France   
+ 
 \* For correspondence: Magali.Irla@inserm.fr
 
 ### Abstract:
-Age-related thymic involution is one of the major causes of immunosenescence,
-characterized by reduced production of naive T cells, leading to increased susceptibility to
-cancers, infections, autoimmunity and reduced vaccine efficacy. Here, we reveal that the
-RANK/RANKL axis is altered in the thymus during aging, which results in a decline in thymic
-epithelial cell (TEC) and endothelial cell (EC) function and, consequently, to thymic
-involution. Whereas RANKL neutralization in young mice mimics thymic involution, RANKL
-treatment in aged individuals restores the thymic architecture, TEC and EC functional
-properties, and thymic T-cell production. This cascade of events results in the renewal of
-peripheral T cells and effective anti-tumor and anti-viral immune responses. Furthermore, we
-provide the proof-of-concept that RANKL stimulates TEC and EC in human thymic organo-
-cultures. Collectively, our findings identify RANKL treatment as a potent therapeutic strategy
-to rejuvenate thymic function and improve T-cell immune function in the elderly.
+<p align="justify"> Age-related thymic involution is one of the major causes of immunosenescence, characterized by a reduced T-cell production, resulting in an increased susceptibility to cancers, infections, autoimmunity and a reduced vaccine efficacy. Here, we identify that the RANK/RANKL axis in the thymus is altered during aging. Using a novel conditional transgenic mouse model, we demonstrate that endothelial cells (EC) depend on RANK for their cellularity and functional maturation. Thus, we uncover that the decreased RANKL availability during aging results in a decline in cellularity and function of both EC and thymic epithelial cells (TEC), leading to thymic involution. We then show that, whereas RANKL neutralization in young mice mimics thymic involution, RANKL cytokine treatment in aged mice restores thymic architecture, EC and TEC cellularity and functional properties. Consequently, RANKL improves T-cell progenitor homing to the thymus and boosts T-cell production. Importantly, this cascade of events results in peripheral T-cell renewal and
+effective anti-tumor and vaccine responses. Furthermore, we provide the proof-of-concept that RANKL stimulates EC and TEC in human thymic organo-cultures. Overall, our findings
+identify this cytokine-based treatment as a potent therapeutic strategy that rejuvenates thymic function and improves T-cell immunity in the elderly. </p>
 
 ### DOI:
 
@@ -52,9 +37,9 @@ Docker
 Thymic_EC_scRNA_RANKL_GST
 Thymic_EC_scRNA_reanalysis
 ```
-Docker: contains the dockerfile and instructions on how to build the docker image and run the container.  
-Thymic_EC_scRNA_RANKL_GST: reproduce the analysis / figures using the **RANKL- GST- scRNA-seq dataset**.  
-Thymic_EC_scRNA_reanalysis: reproduce the analysis / figures using **publicly available thymic EC datasets**. 
+```Docker```: contains the dockerfile and instructions on how to build the docker image and run the container.  
+```Thymic_EC_scRNA_RANKL_GST```: reproduce the analyses / figures using the **RANKL- GST- scRNA-seq dataset**.  
+```Thymic_EC_scRNA_reanalysis```: reproduce the analyses / figures using **publicly available thymic EC datasets**. 
 
 *The following subfolders are present*
 ```
@@ -82,31 +67,31 @@ THYMIC_EC_scRNA_reanalysis
    02_processed_data
    03_figures
 ```
-00_scripts: subfolder containing all scripts.   
-01_raw_data: subfolder to place the raw data into.  
-02_processed_data: subfolder where the h5Seurat files containing the clustering information will be saved.   
-03_references: subfolder containing csv files necessary for the gene set enrichment analysis.  
-03_figures / 04_figures: subfolder where the figures will be saved.   
+```00_scripts```: subfolder containing all scripts to reproduce the analyses / figures.   
+```01_raw_data```: subfolder to place the raw data into.  
+```02_processed_data```: subfolder where the h5Seurat files containing the clustering information will be saved.   
+```03_references```: subfolder containing csv files necessary for the gene set enrichment analysis.  
+```03_figures``` / ```04_figures```: subfolder where the figures will be saved.   
 
-**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the 01_raw_data subfolders describes which dataset(s) to download from the GEO database to redo the analysis. 
+**NOTE:** Each subfolder contains a README.txt describing the subfolder content. The README.txt in all the ```01_raw_data``` subfolders describes which dataset(s) to download from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) to redo the analyses. 
 ***
 ## Steps to run the analysis 
 
 **Step 1:**    
 
-Clone the github repository in your chosen folder. A folder called "MIlab_EC_scRNA_thymus" will be created.     
+Clone the github repository into your chosen folder. A folder called "MIlab_EC_scRNA_thymus" will be created.     
 
 **Step 2:**  
 
-Set the variable WORKING_DIR, using the path to the "MIlab_EC_scRNA_thymus" folder as your value. 
+Set the variable WORKING_DIR using the path to the "MIlab_EC_scRNA_thymus" folder as your value. 
 ```
 export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 ```
 **Step 3:**    
 
-Download raw data from the GEO database and place it in the **01_raw_data** subfolders. The **README.txt** files in each 01_raw_data subfolder tells you which raw data needs to be downloaded.  
+Download raw data from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) and place it in the **```01_raw_data```** subfolders. The **README.txt** files in each **```01_raw_data```** subfolder tells you which raw data needs to be downloaded.  
 
-Raw data generate in this study can be downloaded **here**:  
+Raw data generated in this study can be downloaded **here**:  
 As a quick summary, we utilized the publicly available datasets below. 
 
 | Author(s) | Year | Dataset title | Datatset URL | Database and Identifier  
@@ -119,7 +104,7 @@ As a quick summary, we utilized the publicly available datasets below.
 **Step 4:**    
 
 Install Docker: https://docs.docker.com/engine/install/  
-Build an image from the Dockerfile by running the following.  
+Build an image from the Dockerfile by running the following in your terminal.  
 ```
 cd $WORKING_DIR/Docker
 sudo docker build -t scrna_data_analysis .
@@ -134,12 +119,12 @@ sudo docker run --rm --name cont_scrna_data_analysis -d -p 8888:8787 -v /$WORKIN
 ```
 **Step 6:**  
 
-Connect to the Rstudio server. In an Internet browser, type as a url : http://127.0.0.1:8888   
+In an Internet browser, use the url : http://127.0.0.1:8888 to connect to the Rstudio server.   
 Use the name of the user session your are working with and your chosen password to login. 
 
 **Step 7:**  
 
-Create a new Rstudio project using the directory to the "MIlab_EC_scRNA_thymus" folder as your Existing Directory. In doing so, a **"MIlab_EC_scRNA_thymus.Rproj"** file will be created.   
+Create a new Rstudio project using the path to the "MIlab_EC_scRNA_thymus" folder as your Existing Directory. In doing so, a **"MIlab_EC_scRNA_thymus.Rproj"** file will be created.   
 
 ```
 In RStudio: File > New Project > Existing Directory > Browse > "MIlab_EC_scRNA_thymus" > Select Folder > Create Project
@@ -164,6 +149,6 @@ here() starts at /home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 ```
 **Step 9:**  
 
-Everything has been set up for you to run the analysis.   
-Go to the folder of your choice and start exploring.    
-**NOTE**: All scripts in the 00_scripts subfolders are ordered numerically and should be run as so.    
+Everything is now set for you to run the analyses. The container is connected to the WORKING_DIR you defined and you have access to all the files in the Rstudio environment. Go to the folder of your choice and start exploring.  
+
+**NOTE**: All scripts in the ```00_scripts``` subfolders are ordered numerically and should be run as so.    
