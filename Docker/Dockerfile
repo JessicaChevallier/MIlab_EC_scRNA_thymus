@@ -31,8 +31,11 @@ RUN R -e "install.packages('amap', dependencies = T)"
 RUN R -e "install.packages('Hmisc', dependencies = T)"
 RUN R -e "install.packages('heatmaply', dependencies = T)"
 RUN R -e "install.packages('paletteer', dependencies = T)"
+RUN R -e "install.packages('pheatmap', dependencies = T)"
+RUN R -e "install.packages('msigdbr', dependencies = T)"
 RUN R -e "install.packages('Seurat', version = '4.3.0', dependencies = T)"
 RUN R -e "BiocManager::install('dittoSeq', dependencies = T)"
+RUN R -e "BiocManager::install('escape', dependencies = T)"
 RUN R -e "install.packages('rsvd', dependencies= T)" # Necessary for seurat-wrapper
 
 # Increase timeout for github archive download without "timeout fail"

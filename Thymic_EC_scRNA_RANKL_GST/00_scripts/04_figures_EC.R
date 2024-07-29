@@ -8,6 +8,9 @@ library(SeuratDisk)
 library(scCustomize)
 library(scuttle)
 library(dittoSeq)
+library(viridis)
+library(dplyr)
+library(RColorBrewer)
 library(pheatmap)
 library(escape)
 library(msigdbr)
@@ -106,7 +109,7 @@ ggsave(
   dpi = 500
 )
 
-# Heatmap of enrichment pathways
+# Heatmap of enriched pathways
 
 chosen_pathways <-
   c(
