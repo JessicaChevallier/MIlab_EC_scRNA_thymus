@@ -8,4 +8,4 @@
 
 **02_gene_set_enrichment.R:** After running the first two scripts, use this script to generate **fig. 5E**. The gene sets used to compute the module scores are located in the folder `Thymic_EC_scRNA_RANKL_GST/03_references`. 
 
-**03_figures.R:** Use this script to generate **fig. 5B,C,D,F** and **fig. S6G,H**. 
+**03_figures_EC.R:** Use this script to generate **fig. 5B,C,D,F** and **fig. S6G,H**. 
