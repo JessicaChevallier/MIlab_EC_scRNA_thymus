@@ -208,7 +208,7 @@ combined_data <- FindClusters(combined_data, resolution = 0.2)
 DimPlot(combined_data, label = TRUE)
 
 # Take a look at markers specific to ECs, TECs and splenic B-cells (added as a control)
-# Also take a look at T-cell + Fibroblast markers that maybe contamination
+# Also take a look at T-cell + Fibroblast markers (potential contamination)
 
 # EC markers (Clusters 0,2,3, maybe 9)
 FeaturePlot(
