@@ -167,7 +167,6 @@ EC_data@meta.data$active.idents <- EC_data@active.ident
 EC_data$cluster_cnd <-
   paste0(EC_data$combined_cell_types, " ", EC_data$sample)
 
-
 Idents(EC_data) <- EC_data$cluster_cnd # Change active ident
 
 meta <- EC_data[["cluster_cnd"]]
@@ -273,6 +272,7 @@ venous_sce <- as.SingleCellExperiment(venous_subset)
 # Calculate the mean marker expression per condition for all cells
 celltype_mean <- aggregateAcrossCells(venous_sce,
                                       ids = venous_sce$cluster_cnd,
+                                      use.assay.type = "logcounts",
                                       statistics = "mean")
 
 # Save the heatmap 
@@ -362,6 +362,7 @@ EC_sce <- as.SingleCellExperiment(EC_data)
 # Calculate the mean marker expression per condition for all cells
 celltype_mean <- aggregateAcrossCells(EC_sce,
                                       ids = EC_sce$cluster_cnd,
+                                      use.assay.type = "logcounts",
                                       statistics = "mean")
 
 cell_colors <-
