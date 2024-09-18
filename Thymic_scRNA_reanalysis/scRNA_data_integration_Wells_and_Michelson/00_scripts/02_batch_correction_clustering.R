@@ -1,5 +1,5 @@
 ## Goal 1: Batch correction using the Fastmnn Seurat wrapper 
-## Goal 3: Clustering analysis to identify thymic epithelial cell (TEC) subsets
+## Goal 2: Clustering analysis to identify thymic epithelial cell (TEC) subsets
 
 ## Data taken from the following publication:
 
