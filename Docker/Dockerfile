@@ -51,11 +51,18 @@ RUN R -e "devtools::install_github('jokergoo/ComplexHeatmap')"
 RUN R -e "BiocManager::install('glmGamPoi', dependencies = T)"
 
 # Install seurat-wrapper by downloading the package link and installing it manually because "devtools::install_github('satijalab/seurat-wrappers')" does not work
-RUN mkdir /tmp/downloads && \ 
-	cd /tmp/downloads && \ 
-	wget -cO - https://api.github.com/repos/satijalab/seurat-wrappers/tarball/HEAD > satijalab-seurat-wrappers.tar.gz 
+# RUN mkdir /tmp/downloads && \ 
+	# cd /tmp/downloads && \ 
+	# wget -cO - https://api.github.com/repos/satijalab/seurat-wrappers/tarball/HEAD > satijalab-seurat-wrappers.tar.gz 
 	
-RUN R -e "install.packages('/tmp/downloads/satijalab-seurat-wrappers.tar.gz', repos = NULL, type = 'source')"
+# RUN R -e "install.packages('/tmp/downloads/satijalab-seurat-wrappers.tar.gz', repos = NULL, type = 'source')"
+
+# Install specific package versions compatible with Seurat v4
+RUN R -e "remotes::install_github('https://github.com/ekernf01/DoubletFinder', force = T)"
+RUN R -e "remotes::install_github('satijalab/seurat-wrappers@community-vignette', quiet = FALSE)"
+
+# Install the package "batchelor" necessary for "RunFastMNN" implemented in seurat-wrappers
+RUN R -e "BiocManager::install('batchelor')"
 
 # Install openssh-client to be able to use git in the Rstudio server
 RUN apt-get update && apt-get install -y build-essential openssh-client
