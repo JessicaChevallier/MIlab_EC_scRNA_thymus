@@ -26,7 +26,9 @@ availability during aging results in a decline in cellularity and function of bo
 
 ***
 ## Repository goal 
-This github repository contains the scripts and dockerfile necessary to reproduce the analyses / figures. 
+This github repository contains the scripts and dockerfile necessary to reproduce the analyses / figures.   
+
+<a href="https://zenodo.org/doi/10.5281/zenodo.13793612"><img src="https://zenodo.org/badge/681633951.svg" alt="DOI"></a>
 
 ## Description of the repository structure
 3 main folders:
