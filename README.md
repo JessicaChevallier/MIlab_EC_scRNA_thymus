@@ -7,16 +7,16 @@ RANKL treatment rejuvenates thymic function and improves T-cell immune responses
 ### Authors:
 Jérémy C Santamaria $$1$$, Jessica Chevallier $$1$$, Léa Dutour $$2$$, Amandine Picart $${3,4}$$, Camille Kergaravat $$2$$, Agata Cieslak $${5,6}$$, Mourad Amrane $$7$$, Renaud Vincentelli $$8$$, Denis Puthier $$11$$, Emmanuel Clave $$2$$, Arnauld Sergé $$9$$, Martine Cohen-Solal $${3,4}$$, Antoine Toubert $${2,10}$$, Magali Irla $${1,*}$$
 
-$$1$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France
-$$2$$ Université de Paris Cité, Institut de Recherche Saint Louis, EMiLy, INSERM UMRS 1160, F-75010, Paris, France
-$$3$$ Université de Paris Cité, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France
-$$4$$ Departement de Rhumatologie, Hôpital Lariboisière, AP-HP, F-75010 Paris, France
-$$5$$ Laboratoire d’Onco-Hematologie, Hôpital Necker Enfants Malades, AP-HP, F-75015 Paris, France
-$$6$$ Université Paris Cité, CNRS, INSERM U1151, Institut Necker Enfants Malades (INEM), Paris, France
-$$7$$ Service de Chirurgie Cardiovasculaire, Hôpital Européen Georges Pompidou, AP-HP, F-75015 Paris, France
-$$8$$ Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille Université, Marseille, France
-$$9$$ Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France
-$$10$$ Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, F-75010 Paris France
+$$1$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France  
+$$2$$ Université de Paris Cité, Institut de Recherche Saint Louis, EMiLy, INSERM UMRS 1160, F-75010, Paris, France  
+$$3$$ Université de Paris Cité, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France  
+$$4$$ Departement de Rhumatologie, Hôpital Lariboisière, AP-HP, F-75010 Paris, France  
+$$5$$ Laboratoire d’Onco-Hematologie, Hôpital Necker Enfants Malades, AP-HP, F-75015 Paris, France  
+$$6$$ Université Paris Cité, CNRS, INSERM U1151, Institut Necker Enfants Malades (INEM), Paris, France  
+$$7$$ Service de Chirurgie Cardiovasculaire, Hôpital Européen Georges Pompidou, AP-HP, F-75015 Paris, France  
+$$8$$ Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille Université, Marseille, France  
+$$9$$ Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France  
+$$10$$ Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, F-75010 Paris France  
  
 \* For correspondence: Magali.Irla@inserm.fr
 
