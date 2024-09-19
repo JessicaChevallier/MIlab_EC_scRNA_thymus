@@ -23,12 +23,9 @@ $$8$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseill
 effective anti-tumor and vaccine responses. Furthermore, we provide the proof-of-concept that RANKL stimulates EC and TEC in human thymic organo-cultures. Overall, our findings
 identify this cytokine-based treatment as a potent therapeutic strategy that rejuvenates thymic function and improves T-cell immunity in the elderly. </p>
 
-### DOI:
-
-### GEO: 
 ***
 ## Repository goal 
-This github repository contains the scripts and dockerfile necessary to reproduce the analyses / figures described in the article. 
+This github repository contains the scripts and dockerfile necessary to reproduce the analyses / figures. 
 
 ## Description of the repository structure
 *3 main folders*
