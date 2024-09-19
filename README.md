@@ -29,7 +29,7 @@ availability during aging results in a decline in cellularity and function of bo
 This github repository contains the scripts and dockerfile necessary to reproduce the analyses / figures. 
 
 ## Description of the repository structure
-*3 main folders*
+3 main folders:
 ```
 Docker
 Thymic_EC_scRNA_RANKL_GST
@@ -39,7 +39,7 @@ Thymic_EC_scRNA_reanalysis
 ```Thymic_EC_scRNA_RANKL_GST```: reproduce the analyses / figures using the **RANKL- GST- scRNA-seq dataset**.  
 ```Thymic_EC_scRNA_reanalysis```: reproduce the analyses / figures using **publicly available thymic EC datasets**. 
 
-*The following subfolders are present*
+The following subfolders are present:
 ```
 THYMIC_EC_scRNA_RANKL_GST
   00_scripts
