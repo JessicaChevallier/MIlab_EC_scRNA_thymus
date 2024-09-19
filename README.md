@@ -5,23 +5,24 @@
 RANKL treatment rejuvenates thymic function and improves T-cell immune responses during aging
 
 ### Authors:
-Jérémy C Santamaria $$1$$, Jessica Chevallier $$1$$, Léa Dutour $$2$$, Amandine Picart $${3,4}$$, Renaud Vincentelli $$5$$, Emmanuel Clave $$2$$, Arnauld Sergé $$6$$, Martine Cohen-Solal $${3,4}$$, Antoine Toubert $${2,7}$$, Magali Irla $${8,*}$$
+Jérémy C Santamaria $$1$$, Jessica Chevallier $$1$$, Léa Dutour $$2$$, Amandine Picart $${3,4}$$, Camille Kergaravat $$2$$, Agata Cieslak $${5,6}$$, Mourad Amrane $$7$$, Renaud Vincentelli $$8$$, Denis Puthier $$11$$, Emmanuel Clave $$2$$, Arnauld Sergé $$9$$, Martine Cohen-Solal $${3,4}$$, Antoine Toubert $${2,10}$$, Magali Irla $${1,*}$$
 
-$$1$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France  
-$$2$$ Université de Paris, Institut de Recherche Saint Louis, EMiLy, Inserm UMRS 1160, F-75010, Paris, France  
-$$3$$ Université de Paris, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France  
-$$4$$ Rheumatology Department, AP-HP, Lariboisière Hospital, F-75010 Paris, France  
-$$5$$ Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille Université, Marseille, France  
-$$6$$ Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France  
-$$7$$ Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, Paris France  
-$$8$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France   
+$$1$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France
+$$2$$ Université de Paris Cité, Institut de Recherche Saint Louis, EMiLy, INSERM UMRS 1160, F-75010, Paris, France
+$$3$$ Université de Paris Cité, INSERM, UMR-S 1132 BIOSCAR, F-75010 Paris, France
+$$4$$ Departement de Rhumatologie, Hôpital Lariboisière, AP-HP, F-75010 Paris, France
+$$5$$ Laboratoire d’Onco-Hematologie, Hôpital Necker Enfants Malades, AP-HP, F-75015 Paris, France
+$$6$$ Université Paris Cité, CNRS, INSERM U1151, Institut Necker Enfants Malades (INEM), Paris, France
+$$7$$ Service de Chirurgie Cardiovasculaire, Hôpital Européen Georges Pompidou, AP-HP, F-75015 Paris, France
+$$8$$ Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille Université, Marseille, France
+$$9$$ Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France
+$$10$$ Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, F-75010 Paris France
  
 \* For correspondence: Magali.Irla@inserm.fr
 
 ### Abstract:
-<p align="justify"> Age-related thymic involution is one of the major causes of immunosenescence, characterized by a reduced T-cell production, resulting in an increased susceptibility to cancers, infections, autoimmunity and a reduced vaccine efficacy. Here, we identify that the RANK/RANKL axis in the thymus is altered during aging. Using a novel conditional transgenic mouse model, we demonstrate that endothelial cells (EC) depend on RANK for their cellularity and functional maturation. Thus, we uncover that the decreased RANKL availability during aging results in a decline in cellularity and function of both EC and thymic epithelial cells (TEC), leading to thymic involution. We then show that, whereas RANKL neutralization in young mice mimics thymic involution, RANKL cytokine treatment in aged mice restores thymic architecture, EC and TEC cellularity and functional properties. Consequently, RANKL improves T-cell progenitor homing to the thymus and boosts T-cell production. Importantly, this cascade of events results in peripheral T-cell renewal and
-effective anti-tumor and vaccine responses. Furthermore, we provide the proof-of-concept that RANKL stimulates EC and TEC in human thymic organo-cultures. Overall, our findings
-identify this cytokine-based treatment as a potent therapeutic strategy that rejuvenates thymic function and improves T-cell immunity in the elderly. </p>
+<p align="justify"> Age-related thymic involution is one of the major causes of immunosenescence, characterized by a reduced T-cell production, resulting in an increased susceptibility to cancers, infections, autoimmunity and a reduced vaccine efficacy. Here, we identify that the RANK/RANKL axis in the thymus is altered during aging. Using a novel conditional transgenic mouse model, we demonstrate that endothelial cells (EC) depend on RANK for their cellularity and functional maturation. Thus, we uncover that the decreased RANKL
+availability during aging results in a decline in cellularity and function of both EC and thymic epithelial cells (TEC), leading to thymic involution. We then show that, whereas RANKL neutralization in young mice mimics thymic involution, RANKL cytokine treatment in aged mice restores thymic architecture, EC and TEC cellularity and functional properties. Consequently, RANKL improves T-cell progenitor homing to the thymus and boosts T-cell production. Importantly, this cascade of events results in peripheral T-cell renewal and effective anti-tumor and vaccine responses. Furthermore, we provide the proof-of-concept that RANKL stimulates EC and TEC in human thymic organo-cultures. Overall, our findings identify this cytokine-based treatment as a potent therapeutic strategy that rejuvenates thymic function and improves T-cell immunity in the elderly. </p>
 
 ***
 ## Repository goal 
