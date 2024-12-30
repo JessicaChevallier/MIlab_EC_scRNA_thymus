@@ -92,7 +92,7 @@ export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 
 Download raw data from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) and place it in the **```01_raw_data```** subfolders. The **README.txt** files in each **```01_raw_data```** subfolder tells you which raw data needs to be downloaded.  
 
-Raw data generated in this study can be downloaded **here**:[GSE241880](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241880)
+Raw data generated in this study can be downloaded **here**: [GSE241880](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241880)  
 As a quick summary, we utilized the publicly available datasets below. 
 
 | Author(s) | Year | Dataset title | Datatset URL | Database and Identifier  
