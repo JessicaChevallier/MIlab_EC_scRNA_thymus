@@ -1,11 +1,11 @@
-# RANKL treatment rejuvenates thymic function and improves T-cell immune responses during aging
+# RANKL treatment restores thymic function and improves T cell–mediated immune responses in aged mice
 ## Article information
 
 ### Title:
 RANKL treatment rejuvenates thymic function and improves T-cell immune responses during aging
 
 ### Authors:
-Jérémy C Santamaria $$1$$, Jessica Chevallier $$1$$, Léa Dutour $$2$$, Amandine Picart $${3,4}$$, Camille Kergaravat $$2$$, Agata Cieslak $${5,6}$$, Mourad Amrane $$7$$, Renaud Vincentelli $$8$$, Denis Puthier $$11$$, Emmanuel Clave $$2$$, Arnauld Sergé $$9$$, Martine Cohen-Solal $${3,4}$$, Antoine Toubert $${2,10}$$, Magali Irla $${1,*}$$
+Jérémy C Santamaria $$1$$, Jessica Chevallier $$1$$, Léa Dutour $$2$$, Amandine Picart $${3,4}$$, Camille Kergaravat $$2$$, Agata Cieslak $${5,6}$$, Mourad Amrane $$7$$, Renaud Vincentelli $$8$$, Denis Puthier $$9$$, Emmanuel Clave $$2$$, Arnauld Sergé $$10$$, Martine Cohen-Solal $${3,4}$$, Antoine Toubert $${2,11}$$, Magali Irla $${1,*}$$
 
 $$1$$ Centre d'Immunologie de Marseille-Luminy, CIML, CNRS, INSERM, Aix-Marseille Université, Marseille, Turing Centre for Living Systems, Marseille, France  
 $$2$$ Université de Paris Cité, Institut de Recherche Saint Louis, EMiLy, INSERM UMRS 1160, F-75010, Paris, France  
@@ -15,14 +15,15 @@ $$5$$ Laboratoire d’Onco-Hematologie, Hôpital Necker Enfants Malades, AP-HP, 
 $$6$$ Université Paris Cité, CNRS, INSERM U1151, Institut Necker Enfants Malades (INEM), Paris, France  
 $$7$$ Service de Chirurgie Cardiovasculaire, Hôpital Européen Georges Pompidou, AP-HP, F-75015 Paris, France  
 $$8$$ Architecture et Fonction des Macromolécules Biologiques (AFMB), UMR 7257 CNRS-Aix-Marseille Université, Marseille, France  
-$$9$$ Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France  
-$$10$$ Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, F-75010 Paris France  
+$$9$$ Theories and pproaches of Genomic omplexity (TG), nserm U1090, ix-Marseille University, 13288 Marseille edex 09, France
+$$10$$ Laboratoire Adhesion & Inflammation, LAI, CNRS, INSERM, Aix Marseille Université, Turing Centre for Living Systems, Marseille, France  
+$$11$$ Laboratoire d’Immunologie et d’Histocompatibilité, Hôpital Saint‐Louis, AP‐HP, F-75010 Paris France  
  
 \* For correspondence: Magali.Irla@inserm.fr
 
 ### Abstract:
-<p align="justify"> Age-related thymic involution is one of the major causes of immunosenescence, characterized by a reduced T-cell production, resulting in an increased susceptibility to cancers, infections, autoimmunity and a reduced vaccine efficacy. Here, we identify that the RANK/RANKL axis in the thymus is altered during aging. Using a novel conditional transgenic mouse model, we demonstrate that endothelial cells (EC) depend on RANK for their cellularity and functional maturation. Thus, we uncover that the decreased RANKL
-availability during aging results in a decline in cellularity and function of both EC and thymic epithelial cells (TEC), leading to thymic involution. We then show that, whereas RANKL neutralization in young mice mimics thymic involution, RANKL cytokine treatment in aged mice restores thymic architecture, EC and TEC cellularity and functional properties. Consequently, RANKL improves T-cell progenitor homing to the thymus and boosts T-cell production. Importantly, this cascade of events results in peripheral T-cell renewal and effective anti-tumor and vaccine responses. Furthermore, we provide the proof-of-concept that RANKL stimulates EC and TEC in human thymic organo-cultures. Overall, our findings identify this cytokine-based treatment as a potent therapeutic strategy that rejuvenates thymic function and improves T-cell immunity in the elderly. </p>
+<p align="justify"> Age-related thymic involution, leading to reduced T cell production, is one of the major causes of immunosenescence. This results in an increased susceptibility to cancers, infections, and autoimmunity and in reduced vaccine efficacy. Here, we identified that the receptor activator of nuclear factor κB (RANK)–RANK ligand (RANKL) axis in
+the thymus is altered during aging. Using a conditional transgenic mouse model, we demonstrated that endothelial cells depend on RANK signaling for their cellularity and functional maturation. Decreased RANKL availability during aging resulted in a decline in cellularity and function of both endothelial cells and thymic epithelial cells, contributing to thymic involution. We then found that, whereas RANKL neutralization in young mice mimicked thymic involution, exogenous RANKL treatment in aged mice restored thymic architecture as well as endothelial cell and epithelial cell abundance and functional properties. Consequently, RANKL improved T cell progenitor homing to the thymus and boosted T cell production. This cascade of events resulted in peripheral T cell renewal and effective antitumor and vaccine responses in aged mice. Furthermore, we conducted a proof-of-concept study that showed that RANKL stimulates endothelial cells and epithelial cells in human thymic organocultures. Overall, our findings suggest that targeting the RANK-RANKL axis through exogenous RANKL administration could represent a therapeutic strategy to rejuvenate thymic function and improve T cell immunity during aging. </p>
 
 ***
 ## Repository goal 
@@ -91,7 +92,7 @@ export WORKING_DIR=/home/chevallier/Desktop/projects/MIlab/MIlab_EC_scRNA_thymus
 
 Download raw data from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/) and place it in the **```01_raw_data```** subfolders. The **README.txt** files in each **```01_raw_data```** subfolder tells you which raw data needs to be downloaded.  
 
-Raw data generated in this study can be downloaded **here**:  
+Raw data generated in this study can be downloaded **here**:[GSE241880](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241880)
 As a quick summary, we utilized the publicly available datasets below. 
 
 | Author(s) | Year | Dataset title | Datatset URL | Database and Identifier  
